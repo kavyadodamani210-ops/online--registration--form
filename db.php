@@ -23,8 +23,8 @@ try {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );
-} catch (PDOException $e) {
-    http_response_code(500);
-    exit("Database connection failed.");
+} 
+    exit("Database connection failed:".
+         $e->getMessage());
 }
 ?>
